@@ -1,0 +1,21 @@
+{
+    "name": "citfact/uservars",
+    "type": "bitrix-module",
+    "description": "User vars module",
+    "keywords": ["uservars", "citfact"],
+    "homepage": "https://github.com/studiofact/citfact.uservars",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kulichkin Denis",
+            "email": "onexhovia@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "composer/installers": "~1.0"
+    },
+    "extra": {
+        "installer-name": "citfact.uservars"
+    }
+}
