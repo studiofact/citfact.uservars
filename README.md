@@ -6,6 +6,17 @@
 
 Библиотека находятся в пространстве имен ``Citfact\UserVars``
 
+Установка
+==================
+Создайте или обновите ``composer.json`` файл и запустите ``php composer.phar install``
+``` json
+  {
+      "require": {
+          "citfact/uservars": "dev-master"
+      }
+  }
+```
+
 Пример использования
 ==================
 Для быстрого доступа к переменным и группам, служат классы ``Citfact\UserVars\Vars`` и ``Citfact\UserVars\VarsGroup``
