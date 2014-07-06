@@ -9,7 +9,6 @@
  * file that was distributed with this source code.
  */
 
-
 use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\Entity;
 use Bitrix\Main\Loader;
@@ -52,4 +51,3 @@ $menuList[] = array(
 );
 
 return $menuList;
-
