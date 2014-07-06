@@ -4,15 +4,14 @@
 Необходимы в случае, если требуется добавить несколько простых настроек для сайта с возможностью редактирования из
 административной части, например для возможности изменения клиентом. Для удобства есть возможность группировки переменных.
 
-Библиотека находятся в пространстве имен ``Citfact\Core\UserVars``
+Библиотека находятся в пространстве имен ``Citfact\UserVars``
 
 Пример использования
 ~~~~~~~~~~
-Для быстрого доступа к переменным и группам, служат классы ``Citfact\Core\UserVars\Vars`` и ``Citfact\Core\UserVars\VarsGroup``
+Для быстрого доступа к переменным и группам, служат классы ``Citfact\UserVars\Vars`` и ``Citfact\UserVars\VarsGroup``
 
-.. code-block:: php
-
-  use Citfact\Core\UserVars;
+``` php
+  use Citfact\UserVars;
 
   $varsGroup = new UserVars\VarsGroup();
 
@@ -33,16 +32,16 @@
 
   // Получаем одну переменную из группы
   $var = $vars->findOneByGroup(1)->fetch();
+```
 
 Для более гибкой выборки переменных или групп, работайте на прямую через модели:
 
-- ``Citfact\Core\UserVars\Model\VarsTable``
-- ``Citfact\Core\UserVars\Model\VarsGroupTable``
+- ``Citfact\UserVars\Model\VarsTable``
+- ``Citfact\UserVars\Model\VarsGroupTable``
 
-.. code-block:: php
-
+``` php
   use Bitrix\Main\Entity;
-  use Citfact\Core\UserVars\Model;
+  use Citfact\UserVars\Model;
 
   $queryBuilder = new Entity\Query(Model\VarsGroupTable::getEntity());
   $queryBuilder
@@ -52,12 +51,12 @@
     ->setLimit(1);
 
   $result = $queryBuilder->exec()->fetch();
+```
 
 Удаление и обновление, также выполняется через модель
 
-.. code-block:: php
-
-  use Citfact\Core\UserVars\Model;
+``` php
+  use Citfact\UserVars\Model;
 
   // Удаляем переменную с ID = 1
   Model\VarsTable::delete(1);
